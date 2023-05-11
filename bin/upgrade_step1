@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# 0. get backup file name
+db_backup_file = $(date +%Y%m%d).custom
+
+# 1. maintenance mode on
+heroku maintenance:on
+
+# 2. get dump pg_dump 
+pg_dump $(heroku config:get DATABASE_URL) -Fc -f ./tmp/$db_backup_file
+

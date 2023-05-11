@@ -1,0 +1,6 @@
+#!/bin/bash
+
+# 3. upgrade heroku plan
+
+# 4. pg_restore 
+pg_restore --verbose --clean --if-exists --no-acl --no-owner $(heroku config:get DATABASE_URL) ./tmp/$db_backup_file
