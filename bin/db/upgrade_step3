@@ -1,0 +1,6 @@
+#!/bin/bash
+
+# 5. revert DATABASE_URL
+
+# 6. maintenance mode off 
+heroku maintenance:off

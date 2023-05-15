@@ -1,0 +1,7 @@
+#!/bin/bash
+
+# 1. maintenance mode on
+heroku maintenance:on
+
+# 2. get dump pg_dump 
+pg_dump $(heroku config:get DATABASE_URL) -Fc -f ./tmp/$(date +%Y%m%d).custom

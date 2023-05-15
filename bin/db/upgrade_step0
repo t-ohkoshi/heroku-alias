@@ -1,0 +1,7 @@
+#!/bin/bash
+
+# login heroku
+heroku login
+
+# show heroku config
+heroku config
