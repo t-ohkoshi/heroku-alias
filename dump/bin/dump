@@ -1,0 +1,2 @@
+#!/bin/bash
+pg_dump $(heroku config:get DATABASE_URL) -Fc -f ./tmp/$(date +%Y%m%d).custom
