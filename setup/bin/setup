@@ -1,0 +1,4 @@
+#!/bin/bash
+
+# Arguments is heroku app name
+heroku git:remote -a $1
